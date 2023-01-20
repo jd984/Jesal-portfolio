@@ -12,17 +12,16 @@ const Main = () => {
             <p className="uppercase tracking-widest text-gray-600 text-sm">
               eager learner
             </p>
-            <h1 className="py-2 text-gray-700">
-              Hi, I'm <span className="text-[#5651e5]">Jesal</span> <br /> a
-              Blockchain & Frontend Developer.
+            <h1 className="py-2 text-4xl text-gray-700">
+              Hi, I'm <span className="text-[#5651e5]">Jesal</span> <br />{" "}
+              Developing Websites and Writing Smart Contracts
             </h1>
             <p className="py-4 text-gray-600 m-auto max-w-[70%]">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
-              excepturi mollitia nemo laborum. Ratione, adipisci. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Quas, magnam aut.
-              Ullam voluptatibus obcaecati, atque mollitia deleniti laboriosam
-              velit dolores tenetur minima blanditiis debitis id inventore
-              repellat adipisci ea nostrum.
+              I develop Frontend websites using React.js, TailwindCSS, Next.js,
+              and other Frontend tools & libraries. I love to write Smart
+              Contracts in Solidity language and I have good knowledge of other
+              Blockchain application development tools & libraries such as
+              Truffle, Hardhat, IPFS, Ether.js, Openzeppelin, and SDK Alchemy.
             </p>
             <div className="flex items-center gap-4 justify-between m-auto p-4 max-w-[330px]">
               <Link
