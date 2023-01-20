@@ -33,7 +33,7 @@ const Projects = () => {
   ];
 
   return (
-    <div id="projects" className="w-full">
+    <div id="projects" className="w-full pt-28">
       <div className="max-w-screen-xl py-24 mx-auto px-8 text-center md:text-left">
         <h3 className="text-2xl text-[#5651e5] uppercase md:text-3xl mb-8 border-b border-b-slate-200 w-fit">
           Projects
