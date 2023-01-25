@@ -1,42 +1,36 @@
-import React from "react";
-import Kobe from "../../public/kobe.jpg";
+import image1 from "../../assets/image-1.png";
+import image2 from "../../assets/image-2.png";
+import image3 from "../../assets/image-3.png";
 import Link from "next/link";
 import Image from "next/image";
 
 export const getStaticProps = async () => {
-  const portfolios = [
+  const projectData = [
     {
       id: 1,
-      title: "react weather app",
-      imageSrc: Kobe,
-      url: "react-weather",
+      title: "React Feedback UI",
+      imageSrc: image1,
+      url: "react-feedback",
     },
     {
       id: 2,
-      title: "install node",
-      imageSrc: Kobe,
-      url: "install-node",
+      title: "Github RepoFInder",
+      imageSrc: image2,
+      url: "github-repofinder",
     },
     {
       id: 3,
-      title: "use state explained",
-      imageSrc: Kobe,
-      url: "use-state-hook",
-    },
-    {
-      id: 4,
-      title: "react parallax scroll",
-      imageSrc: Kobe,
-      url: "react-parallax",
+      title: "Personal Portfolio",
+      imageSrc: image3,
+      url: "personal-portfolio",
     },
   ];
-
   return {
-    props: { portfolios },
+    props: { projectData },
   };
 };
 
-const PortfolioAll = ({ portfolios }) => {
+const PortfolioAll = ({ projectData }) => {
   return (
     <div id="portfolio" className="w-full">
       <div className="max-w-screen-xl mx-auto pt-24 p-4 text-center md:text-left">
@@ -45,7 +39,7 @@ const PortfolioAll = ({ portfolios }) => {
         </h3>
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-          {portfolios.map(({ id, title, imageSrc, url }) => (
+          {projectData.map(({ id, title, imageSrc, url }) => (
             <Link key={id} href={`/portfolio/${url}`}>
               <div className="cursor-pointer group shadow-md shadow-gray-600 overflow-hidden rounded-md">
                 <Image

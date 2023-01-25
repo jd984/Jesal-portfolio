@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="hidden md:flex item center">
           <Link
             target="_blank"
-            href="/Jesal Resume.pdf"
+            href="/Jesal-Resume.pdf"
             download={true}
             className="flex items-center mr-4 tracking-widest hover:scale-105 text-fore-primary border-2 border-[#5651e5] w-fit px-4 py-1 rounded cursor-pointer  transition-colors"
           >

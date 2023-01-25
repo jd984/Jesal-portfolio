@@ -1,49 +1,45 @@
-import React from "react";
-import Kobe from "../../public/kobe.jpg";
+import image1 from "../../assets/image-1.png";
+import image2 from "../../assets/image-2.png";
+import image3 from "../../assets/image-3.png";
 import { FaGithub } from "react-icons/fa";
 import { BiChevronLeft } from "react-icons/bi";
 import Link from "next/link";
 import Image from "next/image";
 
-const portfolios = [
+const projectData = [
   {
     id: 1,
-    title: "react weather app",
-    imageSrc: Kobe,
-    url: "react-weather",
+    title: "React Feedback UI",
+    imageSrc: image1,
+    url: "react-feedback",
+    adUrl: "https://feedback-two-livid.vercel.app/",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, at soluta. Voluptate incidunt temporibus tempora, earum esse placeat et ex ipsa, molestias sunt recusandae inventore. Et quasi laudantium laborum amet",
+      "In this project, I build the FeedBack-UI that will take feedback from the user with some rating on it and set the ratings accordingly. We use basic reactjs hooks to get input from the user, css for styling, and different functions to get the correct review ratings.",
   },
   {
     id: 2,
-    title: "install node",
-    imageSrc: Kobe,
-    url: "install-node",
+    title: "Github RepoFInder",
+    imageSrc: image2,
+    url: "github-repofinder",
+    adUrl: "https://github-repo-finder.vercel.app/",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, at soluta. Voluptate incidunt temporibus tempora, earum esse placeat et ex ipsa, molestias sunt recusandae inventore. Et quasi laudantium laborum amet",
+      "In this project, I build the Github-RepoFinder that will find the Github Repositories of the users. I learn how to fetch data from the third-party APIs, usage of Axios in react, and style using TailwindCSS and DaisyUI. Advanced hooks like useRef and useMemo are used in building this project.",
   },
   {
     id: 3,
-    title: "use state explained",
-    imageSrc: Kobe,
-    url: "use-state-hook",
+    title: "Personal Portfolio",
+    imageSrc: image3,
+    url: "personal-portfolio",
+    adUrl: "https://jesal-portfolio.vercel.app/",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, at soluta. Voluptate incidunt temporibus tempora, earum esse placeat et ex ipsa, molestias sunt recusandae inventore. Et quasi laudantium laborum amet",
-  },
-  {
-    id: 4,
-    title: "react parallax scroll",
-    imageSrc: Kobe,
-    url: "react-parallax",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, at soluta. Voluptate incidunt temporibus tempora, earum esse placeat et ex ipsa, molestias sunt recusandae inventore. Et quasi laudantium laborum amet",
+      "In this project, I build a personal portfolio website that shows my skills. I build this website using Reactjs and NextJS. For style, TailwindCSS, react-icons and other libraries are used. Hooks, Router and Axios are used for building this website.",
   },
 ];
 
-const getPortfolioFrom = (url) => portfolios.filter((p) => p.url === url)[0];
+const getPortfolioFrom = (url) => projectData.filter((p) => p.url === url)[0];
 
 export async function getStaticPaths() {
-  const paths = portfolios.map((p) => ({
+  const paths = projectData.map((p) => ({
     params: { id: p.url },
   }));
 
@@ -61,7 +57,9 @@ export async function getStaticProps({ params }) {
   };
 }
 
-const SinglePortfolio = ({ portfolio: { title, imageSrc, description } }) => {
+const SinglePortfolio = ({
+  portfolio: { title, imageSrc, description, adUrl },
+}) => {
   return (
     <div className="h-fit w-full text-center">
       <div className="max-w-screen-xl mx-auto w-full h-full pt-24 p-8 flex flex-col">
@@ -78,7 +76,7 @@ const SinglePortfolio = ({ portfolio: { title, imageSrc, description } }) => {
         </h1>
 
         <div className="relative w-96 h-56 mx-auto overflow-hidden my-8">
-          <Image src={imageSrc} alt="bla" layout="fill" objectFit="cover" />
+          <Image src={imageSrc} alt="bla" className="rounded-lg" />
         </div>
 
         <h2 className="text-center text-gray-700 md:text-left my-4 text-2xl font-bold">
@@ -88,7 +86,7 @@ const SinglePortfolio = ({ portfolio: { title, imageSrc, description } }) => {
         <p>{description}</p>
 
         <div className="flex items-center justify-center gap-10">
-          <Link target="_blank" href="/">
+          <Link target="_blank" href={adUrl}>
             <div className="group flex items-center justify-center my-8 bg-[#5651e5] bg-gradient-to-r from-accent to-violet-400 rounded hover:from-pink-500 hover:to-yellow-500 text-white px-6 py-3 font-bold uppercase tracking-wider cursor-pointer">
               demo
             </div>

@@ -1,31 +1,92 @@
-import React from "react";
-import { ToolboxIcon } from "../configs/icons";
-import { devIcons } from "../configs/dev-icons";
-import DevIcons from "../components/DevIcons";
-
 const Skills = () => {
+  const allSkills = [
+    {
+      id: 0,
+      title: "Solidity",
+    },
+    {
+      id: 1,
+      title: "Hardhat",
+    },
+    {
+      id: 2,
+      title: "Truffle",
+    },
+    {
+      id: 4,
+      title: "Ether.JS",
+    },
+    {
+      id: 5,
+      title: "Chainlink",
+    },
+    {
+      id: 6,
+      title: "Alchemy",
+    },
+    {
+      id: 7,
+      title: "HTML",
+    },
+
+    {
+      id: 8,
+      title: "CSS",
+    },
+
+    {
+      id: 9,
+      title: "TailwindCSS",
+    },
+    {
+      id: 10,
+      title: "Javascript",
+    },
+    {
+      id: 11,
+      title: "ReactJS",
+    },
+    {
+      id: 12,
+      title: "Redux",
+    },
+    {
+      id: 13,
+      title: "NodeJS",
+    },
+    {
+      id: 14,
+      title: "ExpressJs",
+    },
+    {
+      id: 15,
+      title: "Git",
+    },
+    {
+      id: 16,
+      title: "Github",
+    },
+  ];
   return (
-    <main id="skills" className="w-full py-24">
-      <section className="max-w-[1240px] w-full h-full mt-36 mx-auto p-2 justify-center items-center">
-        <span className="flex items-center mb-8">
-          <div className="bg-back-subtle text-[#5651e5] p-2 mr-4 rounded-full">
-            <ToolboxIcon />
-          </div>
-          <h4 className="text-xl uppercase text-[#5651e5] font-semibold">
-            Toolbox
-          </h4>
-        </span>
-        <ul className="grid grid-cols-2 sm:grid-cols-4 pl-6 gap-6">
-          {devIcons.map((icon) => (
-            <DevIcons
-              name={icon.name}
-              iconName={icon.iconName}
-              key={icon.name}
-            />
+    <div id="skills" className="w-full lg:h-screen p-2">
+      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
+        <h3 className="text-2xl text-[#5651e5] uppercase md:text-3xl mb-8 border-b border-b-slate-200 w-fit">
+          Skills
+        </h3>
+        <div className="grid lg:grid-cols-4 gap-8 mt-12">
+          {allSkills.map(({ id, title }) => (
+            <div
+              key={id}
+              className="flex flex-col lg:flex-row gap-10 lg:gap-0 justify-center items-center p-6 shadow-lg rounded-xl hover:scale-105 ease-in duration-300"
+            >
+              <h3 className="text-xl text-gray-600 font-light uppercase border-[#5651e5] border-b-2">
+                {title}
+              </h3>
+            </div>
           ))}
-        </ul>
-      </section>
-    </main>
+        </div>
+      </div>
+    </div>
   );
 };
 
