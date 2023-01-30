@@ -31,6 +31,13 @@ const Navbar = () => {
   return (
     <nav className="w-full h-20 bg-[#ecf0f3] shadow-xl fixed z-10 text-gray-700 duration-300 ease-in">
       <div className="flex justify-between items-center w-full h-full max-w-screen-xl mx-auto p-4">
+        <div className="lg:hidden xl:hidden">
+          <Link onClick={() => setNavigation(false)} href="/">
+            <h2 className="text-2xl font-bold underline underline-offset-2 tracking-wider cursor-pointer">
+              Jesal
+            </h2>
+          </Link>
+        </div>
         <div>
           <ul className="hidden md:flex">
             {links.map(({ link, id }) => (

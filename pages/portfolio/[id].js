@@ -1,6 +1,8 @@
-import image1 from "../../assets/image-1.png";
-import image2 from "../../assets/image-2.png";
-import image3 from "../../assets/image-3.png";
+import image1 from "../../assetss/image-1.png";
+import image2 from "../../assetss/image-2.png";
+import image3 from "../../assetss/image-3.png";
+import image4 from "../../assetss/image-4.png";
+import image5 from "../../assetss/image-5.png";
 import { FaGithub } from "react-icons/fa";
 import { BiChevronLeft } from "react-icons/bi";
 import Link from "next/link";
@@ -9,30 +11,48 @@ import Image from "next/image";
 const projectData = [
   {
     id: 1,
-    title: "React Feedback UI",
+    title: "NFT Marketplace",
     imageSrc: image1,
-    url: "react-feedback",
-    adUrl: "https://feedback-two-livid.vercel.app/",
+    url: "nft-marketplace",
+    adUrl: "https://github.com/jd984/nft-marketplace",
     description:
-      "In this project, I build the FeedBack-UI that will take feedback from the user with some rating on it and set the ratings accordingly. We use basic reactjs hooks to get input from the user, css for styling, and different functions to get the correct review ratings.",
+      "In this project, I build the NFT-Marketplace on which users can buy, sell and upload their own NFTs. I write smart contracts using Solidity language and uploaded all NFTs on PINATA, an IPFS platform. I use Hardhat to deploy my contract. In the frontend interface, I use ReactJs. In these projects, I learned how to write smart contracts, deploy web3 applications, and use of testnets and faucets for your projects.",
   },
   {
     id: 2,
-    title: "Github RepoFInder",
+    title: "Voting Dapp",
     imageSrc: image2,
+    url: "voting-dapp",
+    adUrl: "https://github.com/jd984/voting-dapp",
+    description:
+      "In this project, I build a decentralized voting system in which users can create voters, they can vote for each other, and get the results. I write smart contracts using Solidity language and I use Hardhat to deploy my contract. For the frontend interface, I use ReactJs and React hooks. In these projects, I learn how to write smart contracts for decentralized applications and how to connect smart contracts to  frontend applications",
+  },
+  {
+    id: 3,
+    title: "Github RepoFInder",
+    imageSrc: image3,
     url: "github-repofinder",
     adUrl: "https://github-repo-finder.vercel.app/",
     description:
       "In this project, I build the Github-RepoFinder that will find the Github Repositories of the users. I learn how to fetch data from the third-party APIs, usage of Axios in react, and style using TailwindCSS and DaisyUI. Advanced hooks like useRef and useMemo are used in building this project.",
   },
   {
-    id: 3,
+    id: 4,
     title: "Personal Portfolio",
-    imageSrc: image3,
+    imageSrc: image4,
     url: "personal-portfolio",
     adUrl: "https://jesal-portfolio.vercel.app/",
     description:
       "In this project, I build a personal portfolio website that shows my skills. I build this website using Reactjs and NextJS. For style, TailwindCSS, react-icons and other libraries are used. Hooks, Router and Axios are used for building this website.",
+  },
+  {
+    id: 5,
+    title: "React Feedback UI",
+    imageSrc: image5,
+    url: "react-feedback",
+    adUrl: "https://feedback-two-livid.vercel.app/",
+    description:
+      "In this project, I build the FeedBack-UI that will take feedback from the user with some rating on it and set the ratings accordingly. We use basic reactjs hooks to get input from the user, css for styling, and different functions to get the correct review ratings.",
   },
 ];
 
@@ -83,7 +103,7 @@ const SinglePortfolio = ({
           Description
         </h2>
 
-        <p>{description}</p>
+        <p className="text-start">{description}</p>
 
         <div className="flex items-center justify-center gap-10">
           <Link target="_blank" href={adUrl}>

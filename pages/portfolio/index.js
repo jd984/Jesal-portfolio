@@ -1,6 +1,8 @@
-import image1 from "../../assets/image-1.png";
-import image2 from "../../assets/image-2.png";
-import image3 from "../../assets/image-3.png";
+import image1 from "../../assetss/image-1.png";
+import image2 from "../../assetss/image-2.png";
+import image3 from "../../assetss/image-3.png";
+import image4 from "../../assetss/image-4.png";
+import image5 from "../../assetss/image-5.png";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -8,21 +10,33 @@ export const getStaticProps = async () => {
   const projectData = [
     {
       id: 1,
-      title: "React Feedback UI",
+      title: "NFT Marketplace",
       imageSrc: image1,
-      url: "react-feedback",
+      url: "nft-marketplace",
     },
     {
       id: 2,
-      title: "Github RepoFInder",
+      title: "Voting Dapp",
       imageSrc: image2,
-      url: "github-repofinder",
+      url: "voting-dapp",
     },
     {
       id: 3,
-      title: "Personal Portfolio",
+      title: "Github RepoFInder",
       imageSrc: image3,
+      url: "github-repofinder",
+    },
+    {
+      id: 4,
+      title: "Personal Portfolio",
+      imageSrc: image4,
       url: "personal-portfolio",
+    },
+    {
+      id: 5,
+      title: "React Feedback UI",
+      imageSrc: image5,
+      url: "react-feedback",
     },
   ];
   return {
